@@ -60,21 +60,12 @@ print("superficie del triangulo:",r)
 eje6()
 
 def eje7():
-    print("ingrese un numero1")
-num1=int(input())
-print("ingrese un numero2")
-num2=int(input())
-print("ingrese un numero3")
-num3=int(input())
-print("ingrese un numero4")
-num4=int(input())
-print("ingrese un numero5")
-num5=int(input())
-print("ingrese un numero6")
-num6=int(input())
-
-r=num1+num2+num3+num4+num4+num5+num6
-p=r/6
+    print("ingrese un 6 numeros")
+    sumaxd=0
+    for i in range(6):
+        n=float(input())
+        sumaxd+=n
+p=sumaxd/6
 print("el promedio es:",p)
 eje7()
 
