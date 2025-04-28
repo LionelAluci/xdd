@@ -44,11 +44,10 @@ num2=int(input())
 print("ingrese segundos")
 num3=int(input())
 
-r1=num1*3600
-print("horas a segundos",r1)
-r2=num2*60
-print("horas a minutos",r2)
-print("segundos a segundos",num3)
+ra=num1*3600
+rb=num2*60
+resu=ra+rb+num3
+print("segundos: ", resu)
 eje5()
 
 def eje6():
