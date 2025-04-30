@@ -60,7 +60,7 @@ print("superficie del triangulo:",r)
 eje6()
 
 def eje7():
-    print("ingrese un 6 numeros")
+    print("ingrese 6 numeros")
     sumaxd=0
     for i in range(6):
         n=float(input())
@@ -80,13 +80,16 @@ print("el porcentaje es:",r,"%")
 eje8()
 
 def eje9():
-    print("elegi una fecha")
-array=[]
-array=input()
+print("Ingrese una fecha en formato DDMMAAAA:")
+fecha = int(input())
+anio=fecha-int(fecha/10000)*10000
+resto=int(fecha/10000)
+mes=resto-int(resto/100)*100
+dia=int(resto/100)
 
-print("el dia es:",array[0],array[1])
-print("el mes es:",array[2],array[3])
-print("el año es:",array[4],array[5],array[6],array[7])
+print("Día:",dia)
+print("Mes:",mes)
+print("Año:",anio)
 eje9()
 
 def eje10():
@@ -101,11 +104,23 @@ print("la nota final es",nota)
 eje10()
 
 def eje11():
-    print("ingrese numero de autos")
-n1=int(input())
-print("ingrese valor de la unidad")
-n2=float(input())
+   print("Ingrese la cantidad de autos vendidos:")
+autosvendi=int(input())
 
-salario=5500+(n1*200)+(n2*0.05)
-print("el salario es:",salario)
+preciAu=[]
+print("Ingrese el precio del auto:")
+precio=float(input())
+
+for i in range(autosvendi):
+    preciAu.append(precio)
+
+salariofijo=5500
+comisionfija=autosvendi*200
+
+adicionalxautos=0
+for precio in preciAu:
+    adicionalxautos+=precio*0.05
+    
+salarioTo=salariofija+comisionfija + adicionalxautos
+print("El salario total del vendedor es: $", salarioTo)
 eje11()
